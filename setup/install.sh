@@ -140,7 +140,11 @@ else
 		Release=Kali
 		wget http://ftp.us.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb
 		dpkg -i libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb
-		sudo apt-get install -y make g++ python-dev python-m2crypto swig python-pip libxml2-dev default-jdk zlib1g-dev libssl1.0-dev build-essential libssl1.0-dev libxml2-dev zlib1g-dev
+		sudo apt-get install -y make g++ python-dev swig python-pip libxml2-dev default-jdk zlib1g-dev libssl1.0-dev build-essential libssl1.0-dev libxml2-dev zlib1g-dev
+		wget "http://ftp.us.debian.org/debian/pool/main/m/m2crypto/python-m2crypto_0.31.0-4_i386.deb"
+		wget "http://ftp.us.debian.org/debian/pool/main/p/python-typing/python-typing_3.6.6-1_all.deb"
+		dpkg -i "python-typing_3.6.6-1_all.deb"
+		dpkg -i "python-m2crypto_0.31.0-4_i386.deb"
 		pip install --upgrade pip
 		sudo pip install -r requirements.txt 
 		install_powershell
